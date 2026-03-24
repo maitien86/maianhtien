@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tien Mai, Ph.D. - Academic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for simple vector icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
+        .section-title { position: relative; padding-bottom: 0.5rem; margin-bottom: 2rem; font-weight: 700; color: #1e3a8a; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 60px; height: 4px; background-color: #3b82f6; border-radius: 2px; }
+        
+        /* Custom timeline styling */
+        .timeline-container {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 0.25rem;
+            top: 0.5rem;
+            bottom: 0;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -2.2rem;
+            top: 0.35rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            border: 3px solid white;
+            box-shadow: 0 0 0 1px #e2e8f0;
+        }
+        .timeline-dot.current {
+            background-color: #1e40af;
+            box-shadow: 0 0 0 2px #bfdbfe;
+        }
+
+        /* Custom scrollbar for sidebar */
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed selection:bg-blue-200">
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 top-0 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#home" class="text-xl font-bold text-blue-900 tracking-tight hover:text-blue-700 transition">Tien Mai, Ph.D.</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                    <a href="#history" class="hover:text-blue-600 transition">History</a>
+                    <a href="#awards" class="hover:text-blue-600 transition">Awards</a>
+                    <a href="#publications" class="hover:text-blue-600 transition">Publications</a>
+                    <a href="#group" class="hover:text-blue-600 transition">Group</a>
+                    <a href="#news" class="hover:text-blue-600 transition">News</a>
+                </div>
+
+                <!-- Mobile Menu Button (visual only for this demo) -->
+                <button class="md:hidden text-slate-600 hover:text-blue-600">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home / About Section -->
+    <section id="home" class="pt-32 pb-20 px-4 bg-white relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-72 h-72 bg-indigo-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center relative z-10">
+            <div class="w-48 h-48 md:w-64 md:h-64 bg-slate-200 rounded-2xl flex-shrink-0 border-4 border-white shadow-xl overflow-hidden transform rotate-2 hover:rotate-0 transition duration-300">
+                <!-- Personal Photo -->
+                <img src="tienmai.jpg" alt="Tien Mai, Ph.D." class="w-full h-full object-cover">
+            </div>
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-4 tracking-tight">Tien Mai<span class="text-blue-600">, Ph.D.</span></h1>
+                <h2 class="text-xl md:text-2xl text-slate-700 font-medium mb-2">Assistant Professor of Information Systems</h2>
+                <h3 class="text-lg text-blue-600 font-semibold mb-6 inline-block bg-blue-50 px-3 py-1 rounded-full">Lee Kong Chian Fellow (Tenure Track)</h3>
+                
+                <div class="space-y-3 text-slate-600 bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm inline-block text-left w-full max-w-2xl">
+                    <p class="flex items-start gap-3">
+                        <i data-lucide="building-2" class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0"></i>
+                        <span>School of Computing and Information Systems<br>Singapore Management University</span>
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-blue-500 flex-shrink-0"></i>
+                        <span>80 Stamford Road, Singapore 178902</span>
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <i data-lucide="mail" class="w-5 h-5 text-blue-500 flex-shrink-0"></i>
+                        <a href="mailto:atmai@smu.edu.sg" class="text-blue-600 hover:text-blue-800 hover:underline font-medium transition">atmai@smu.edu.sg</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="py-24 px-4 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl section-title">History & Education</h2>
+            
+            <div class="timeline-container mt-10">
+                <div class="timeline-item">
+                    <div class="timeline-dot current"></div>
+                    <span class="text-sm font-bold text-blue-600 tracking-wider uppercase">2020 - Current</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">Assistant Professor of Information Systems</h3>
+                    <p class="text-slate-600 mt-2 leading-relaxed">School of Computing and Information Systems, Singapore Management University (Tenure Track).</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="text-sm font-bold text-slate-500 tracking-wider uppercase">2018 - 2020</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">SMART Postdoc Scholar</h3>
+                    <p class="text-slate-600 mt-2 leading-relaxed">Singapore-MIT Alliance for Research and Technology and Massachusetts Institute of Technology.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="text-sm font-bold text-slate-500 tracking-wider uppercase">2016 - 2018</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">Postdoctoral Fellow</h3>
+                    <p class="text-slate-600 mt-2 leading-relaxed">CN Chair in Optimization of Railway Operations, and Canada Excellence Research Chair in Data Science for Real-Time Decision-Making, IVADO and GERAD.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="text-sm font-bold text-slate-500 tracking-wider uppercase">2013 - 2016</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">Ph.D. in Operations Research</h3>
+                    <p class="text-slate-600 mt-2 leading-relaxed">Department of Computer Science and Operation Research, University of Montreal.</p>
+                    <div class="bg-white p-4 rounded-lg border border-slate-200 mt-3 shadow-sm">
+                        <p class="text-sm font-semibold text-slate-800">🏆 Dean's Honor List</p>
+                        <p class="text-sm text-slate-600 mt-1"><span class="font-medium text-slate-700">Thesis:</span> Dynamic programming approaches for estimating and applying large-scale discrete choice models.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="text-sm font-bold text-slate-500 tracking-wider uppercase">2010 - 2012</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">M.Sc. in Operations Research</h3>
+                    <p class="text-slate-600 mt-2 leading-relaxed">Department of Computer Science and Operation Research, University of Montreal.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="text-sm font-bold text-slate-500 tracking-wider uppercase">2004 - 2009</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">B.Sc. in Computer Science</h3>
+                    <p class="text-slate-600 mt-2 leading-relaxed">School of Information & Communication Technology, Hanoi University of Technology, Viet Nam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="py-24 px-4 bg-white border-y border-slate-200">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl section-title">Awards & Honors</h2>
+            
+            <div class="space-y-4 mt-10">
+                <div class="flex items-start gap-5 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-full bg-yellow-50 text-yellow-600 flex items-center justify-center flex-shrink-0 group-hover:bg-yellow-100 transition">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Lee Kong Chian Fellowship <span class="inline-block px-2 py-0.5 ml-2 bg-blue-100 text-blue-700 text-xs rounded-full align-middle">2024 - 2026</span></h3>
+                        <p class="text-slate-600 mt-2 text-sm leading-relaxed">Established in 2014 using the Lee Kong Chian Fund for Research Excellence from the Lee Foundation, the Fellowship acknowledges and rewards SMU faculty who have an excellent research record and hold great promise.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-full bg-slate-50 text-slate-600 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-50 group-hover:text-blue-600 transition">
+                        <i data-lucide="medal" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">MIT-SMART Scholar Fellowship <span class="inline-block px-2 py-0.5 ml-2 bg-slate-100 text-slate-700 text-xs rounded-full align-middle">2018</span></h3>
+                        <p class="text-slate-600 mt-2 text-sm leading-relaxed">Singapore-MIT Alliance for Research and Technology (SMART).</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-full bg-slate-50 text-slate-600 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-50 group-hover:text-blue-600 transition">
+                        <i data-lucide="trophy" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">INFORMS-TSL Dissertation Prize (1st place) <span class="inline-block px-2 py-0.5 ml-2 bg-slate-100 text-slate-700 text-xs rounded-full align-middle">2016</span></h3>
+                        <p class="text-slate-600 mt-2 text-sm leading-relaxed">The oldest and most prestigious honor for doctoral dissertations in the transportation science and logistics area.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition duration-300 group">
+                    <div class="w-12 h-12 rounded-full bg-slate-50 text-slate-600 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-50 group-hover:text-blue-600 transition">
+                        <i data-lucide="trophy" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Eric Pas Dissertation Prize (1st place) <span class="inline-block px-2 py-0.5 ml-2 bg-slate-100 text-slate-700 text-xs rounded-full align-middle">2016</span></h3>
+                        <p class="text-slate-600 mt-2 text-sm leading-relaxed">Annual prize recognizing the best doctoral dissertations in the area of travel behaviour research.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <div class="flex items-start gap-4 p-5 rounded-xl bg-slate-50 border border-slate-100">
+                        <i data-lucide="star" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Best Paper Award</h4>
+                            <p class="text-xs text-slate-500 mt-1">3rd Symposium of the European Association for Research in Transportation (Sep 2014)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 rounded-xl bg-slate-50 border border-slate-100">
+                        <i data-lucide="star" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">PhD thesis on Dean's honor list</h4>
+                            <p class="text-xs text-slate-500 mt-1">Faculty of Graduate and Postdoctoral studies (FESP), University of Montreal (May 2017)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 rounded-xl bg-slate-50 border border-slate-100">
+                        <i data-lucide="star" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">J.A. Bombardier Excellence Award</h4>
+                            <p class="text-xs text-slate-500 mt-1">FESP - UdeM (Sep 2015)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-5 rounded-xl bg-slate-50 border border-slate-100">
+                        <i data-lucide="star" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Michael-Florian Scholarship</h4>
+                            <p class="text-xs text-slate-500 mt-1">CIRRELT - Interuniversity Research Centre on Enterprise Networks, Logistics and Transportation (Dec 2015)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Publications Section -->
+    <section id="publications" class="py-24 px-4 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl section-title">Research & Publications</h2>
+            
+            <!-- Research Focus -->
+            <div class="mb-16 mt-10">
+                <h3 class="text-2xl font-bold text-slate-900 mb-4">Research Overview</h3>
+                <p class="text-slate-700 leading-relaxed mb-8 max-w-4xl text-lg">
+                    Understanding human preferences and predicting human behavior in complex and interactive environments has been a longstanding focus across econometrics, social science, and machine learning. My long-term aim is to address how we can efficiently model and predict human behavior in complex, dynamic, and interactive environments; make the modeling adaptive and robust; and ensure these behavioral models are useful for downstream decision-making tasks.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Methodologies -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <h4 class="font-bold text-blue-900 mb-4 flex items-center gap-2">
+                            <i data-lucide="microscope" class="w-5 h-5"></i> Methodologies
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-full border border-blue-100">Discrete choice theory</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-full border border-blue-100">Robust/Stochastic optimization</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-full border border-blue-100">Dynamic programming</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-full border border-blue-100">Reinforcement / Imitation learning</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-full border border-blue-100">Simulation-based optimization</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Applications -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <h4 class="font-bold text-emerald-900 mb-4 flex items-center gap-2">
+                            <i data-lucide="target" class="w-5 h-5"></i> Applications
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full border border-emerald-100">Behavior modeling</span>
+                            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full border border-emerald-100">Transportation planning</span>
+                            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full border border-emerald-100">Revenue/workforce management</span>
+                            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full border border-emerald-100">AI / Security Games</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publications Info Note -->
+            <div class="bg-white border border-slate-200 p-4 rounded-xl mb-12 text-sm text-slate-700 flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center shadow-sm">
+                <p class="flex items-center gap-2">
+                    <i data-lucide="info" class="w-5 h-5 text-blue-500"></i>
+                    <span><strong class="text-slate-900">*</strong> indicates student or research engineer under my supervision.</span>
+                </p>
+                <div class="flex gap-3 font-medium text-xs md:text-sm">
+                    <span class="bg-slate-50 px-3 py-1.5 rounded-md border border-slate-200 text-slate-600">[J] Journal</span>
+                    <span class="bg-slate-50 px-3 py-1.5 rounded-md border border-slate-200 text-slate-600">[C] Conference</span>
+                    <span class="bg-slate-50 px-3 py-1.5 rounded-md border border-slate-200 text-slate-600">[B] Book</span>
+                </div>
+            </div>
+
+            <!-- Selected Recent Publications -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2">
+                    <i data-lucide="bookmark" class="w-6 h-6 text-blue-600"></i> Selected Recent Publications
+                </h3>
+                <div class="grid gap-6 md:grid-cols-2">
+                    <!-- Paper -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+                        <h4 class="font-bold text-slate-900 leading-snug">Network-based Representations and Dynamic Discrete Choice Models for Multiple Discrete Choice Analysis</h4>
+                        <p class="text-slate-600 mt-2 text-sm">Tran H.*, Mai T.</p>
+                        <p class="text-sm font-semibold text-blue-700 mt-1">Transportation Research Part B (2024)</p>
+                        <div class="flex flex-wrap items-center gap-2 mt-4">
+                            <span class="text-xs font-medium px-2 py-1 bg-slate-100 text-slate-600 rounded">Discrete Choice</span>
+                            <span class="text-xs font-medium px-2 py-1 bg-slate-100 text-slate-600 rounded">Route Choice</span>
+                            <a href="https://scholar.google.com/scholar?q=Network-based+Representations+and+Dynamic+Discrete+Choice+Models+for+Multiple+Discrete+Choice+Analysis" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                        </div>
+                    </div>
+                    <!-- Paper -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+                        <h4 class="font-bold text-slate-900 leading-snug">Constrained Assortment Optimization under the Cross-Nested Logit Model</h4>
+                        <p class="text-slate-600 mt-2 text-sm">Le C.*, Mai T.</p>
+                        <p class="text-sm font-semibold text-blue-700 mt-1">Production and Operations Management (2024)</p>
+                        <div class="flex flex-wrap items-center gap-2 mt-4">
+                            <span class="text-xs font-medium px-2 py-1 bg-slate-100 text-slate-600 rounded">Discrete Choice</span>
+                            <span class="text-xs font-medium px-2 py-1 bg-slate-100 text-slate-600 rounded">Revenue Management</span>
+                            <a href="https://scholar.google.com/scholar?q=Constrained+Assortment+Optimization+under+the+Cross-Nested+Logit+Model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded transition-colors"><i data-lucide="link" class="w-3.5 h-3.5"></i> Link</a>
+                        </div>
+                    </div>
+                    <!-- Paper -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+                        <h4 class="font-bold text-slate-900 leading-snug">MisoDICE: Multi-Agent Imitation from Mixed-Quality Demonstrations</h4>
+                        <p class="text-slate-600 mt-2 text-sm">Bui T.V.*, Mai T., Thanh H. Nguyen</p>
+                        <p class="text-sm font-semibold text-blue-700 mt-1">NeurIPS (2025)</p>
+                        <div class="flex flex-wrap items-center gap-2 mt-4">
+                            <span class="text-xs font-medium px-2 py-1 bg-slate-100 text-slate-600 rounded">IRL/RL</span>
+                            <span class="text-xs font-medium px-2 py-1 bg-slate-100 text-slate-600 rounded">Multi-agent RL</span>
+                            <span class="text-xs font-medium px-2 py-1 bg-slate-100 text-slate-600 rounded">Competitive Games</span>
+                            <a href="https://scholar.google.com/scholar?q=MisoDICE:+Multi-Agent+Imitation+from+Mixed-Quality+Demonstrations" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                        </div>
+                    </div>
+                    <!-- Paper -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-300 hover:shadow-md transition">
+                        <h4 class="font-bold text-slate-900 leading-snug">Choices Are Not Independent: Stackelberg Security Games with Nested Quantal Response Models</h4>
+                        <p class="text-slate-600 mt-2 text-sm">Mai T., Sinha A.</p>
+                        <p class="text-sm font-semibold text-blue-700 mt-1">AAAI Conference on Artificial Intelligence (2022)</p>
+                        <div class="flex flex-wrap items-center gap-2 mt-4">
+                            <span class="text-xs font-medium px-2 py-1 bg-slate-100 text-slate-600 rounded">Security Game</span>
+                            <span class="text-xs font-medium px-2 py-1 bg-slate-100 text-slate-600 rounded">Nested logit</span>
+                            <a href="https://scholar.google.com/scholar?q=Choices+Are+Not+Independent:+Stackelberg+Security+Games+with+Nested+Quantal+Response+Models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12">
+                
+                <!-- Full Publications List -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-4">Full List of Publications</h3>
+                    
+                    <div class="space-y-0 text-slate-800">
+                        <!-- 2026 -->
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-blue-500"></div>
+                            <span class="absolute -left-16 top-0.5 text-sm font-bold text-blue-600">2026</span>
+                            <h4 class="text-lg font-bold leading-snug">Competitive Facility Location under Cross-Nested Logit Customer Choice Model</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Le B.L.*, Mai T., Ta T.A, Ha M.H., Vu D.M</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> INFORMS Journal on Computing</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Facility Location</span>
+                                <a href="https://scholar.google.com/scholar?q=Competitive+Facility+Location+under+Cross-Nested+Logit+Customer+Choice+Model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+                        
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Constrained Pricing in Logit-based Revenue Management</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Shao Q.*, Mai T., and Cheng Shih-Fen</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> INFORMS Journal on Computing</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Revenue Management</span>
+                                <a href="https://scholar.google.com/scholar?q=Constrained+Pricing+in+Logit-based+Revenue+Management" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <!-- 2025 -->
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200 mt-4">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-blue-500"></div>
+                            <span class="absolute -left-16 top-0.5 text-sm font-bold text-blue-600">2025</span>
+                            <h4 class="text-lg font-bold leading-snug">Constrained Assortment Optimization under the Mixed-Logit Model: Approximation Schemes and Outer Approximation Approaches</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Pham H.G*, Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> European Journal of Operational Research</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Revenue Management</span>
+                                <a href="https://scholar.google.com/scholar?q=Constrained+Assortment+Optimization+under+the+Mixed-Logit+Model:+Approximation+Schemes+and+Outer+Approximation+Approaches" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">No Experts, No Problem: Avoidance Learning from Bad Demonstrations</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Hoang H.*, Mai T., Varakantham P.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> NeurIPS 2025</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Imitation Learning</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <a href="https://scholar.google.com/scholar?q=No+Experts,+No+Problem:+Avoidance+Learning+from+Bad+Demonstrations" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">IOSTOM: Offline Imitation Learning from Observations via State Transition Occupancy Matching</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Pham Q.A.*, Brahmanage J.C.*, Mai T., Kumar A.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> NeurIPS 2025</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Imitation Learning</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <a href="https://scholar.google.com/scholar?q=IOSTOM:+Offline+Imitation+Learning+from+Observations+via+State+Transition+Occupancy+Matching" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">MisoDICE: Multi-Agent Imitation from Mixed-Quality Demonstrations</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Bui T.V.*, Mai T., Thanh H. Nguyen</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> NeurIPS 2025</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Multi-agent RL</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Competitive Games</span>
+                                <a href="https://scholar.google.com/scholar?q=MisoDICE:+Multi-Agent+Imitation+from+Mixed-Quality+Demonstrations" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">An Exponential Cone Integer Programming Approach for 0-1 Fractional Optimization</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Pham H.G*, Ta T.A., Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Journal of Combinatorial Optimization</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Revenue Management</span>
+                                <a href="https://scholar.google.com/scholar?q=An+Exponential+Cone+Integer+Programming+Approach+for+0-1+Fractional+Optimization" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">O-MAPL: Offline Multi-agent Preference Learning</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Bui T.V.*, Mai T., Thanh H. Nguyen</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> ICML 2025</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Multi-agent RL</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Competitive Games</span>
+                                <a href="https://scholar.google.com/scholar?q=O-MAPL:+Offline+Multi-agent+Preference+Learning" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">ComaDICE: Offline Cooperative Multi-Agent Reinforcement Learning with Stationary Distribution Shift Regularization</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Bui T.V.*, Thanh H. Nguyen, Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> ICLR 2025</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Imitation Learning</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Competitive Games</span>
+                                <a href="https://scholar.google.com/scholar?q=ComaDICE:+Offline+Cooperative+Multi-Agent+Reinforcement+Learning+with+Stationary+Distribution+Shift+Regularization" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <!-- 2024 -->
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200 mt-4">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-blue-500"></div>
+                            <span class="absolute -left-16 top-0.5 text-sm font-bold text-blue-600">2024</span>
+                            <h4 class="text-lg font-bold leading-snug">Constrained Assortment Optimization under the Cross-Nested Logit Model</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Le C.*, Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Production and Operations Management</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Revenue Management</span>
+                                <a href="https://scholar.google.com/scholar?q=Constrained+Assortment+Optimization+under+the+Cross-Nested+Logit+Model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                                <a href="#" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded transition-colors"><i data-lucide="link" class="w-3.5 h-3.5"></i> Link</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Network-based Representations and Dynamic Discrete Choice Models for Multiple Discrete Choice Analysis</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Tran H.*, Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Transportation Research Part B</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=Network-based+Representations+and+Dynamic+Discrete+Choice+Models+for+Multiple+Discrete+Choice+Analysis" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Mimicking To Dominate: Imitation Learning Strategies for Success in Multiagent Competitive Games</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Bui T.V.*, Mai T., Thanh H. Nguyen</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> NeurIPS 2024</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Imitation Learning</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Competitive Games</span>
+                                <a href="https://scholar.google.com/scholar?q=Mimicking+To+Dominate:+Imitation+Learning+Strategies+for+Success+in+Multiagent+Competitive+Games" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">SPRINQL: Sub-optimal Demonstrations driven Offline Imitation Learning</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Hoang H*., Mai T., Varakantham P.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> NeurIPS 2024</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Imitation Learning</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <a href="https://scholar.google.com/scholar?q=SPRINQL:+Sub-optimal+Demonstrations+driven+Offline+Imitation+Learning" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Inverse Factorized Q-Learning for Cooperative Multi-agent Imitation Learning</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Bui T.V.*, Mai T., Thanh H. Nguyen</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> NeurIPS 2024</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Imitation Learning</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Multiagent Games</span>
+                                <a href="https://scholar.google.com/scholar?q=Inverse+Factorized+Q-Learning+for+Cooperative+Multi-agent+Imitation+Learning" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Stackelberg Network Interdiction under Boundedly Rational Adversary</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Bose A., Sinha A., Thanh H. Nguyen</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> IJCAI 2024</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Dynamic Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Behavioral game theory</span>
+                                <a href="https://scholar.google.com/scholar?q=Stackelberg+Network+Interdiction+under+Boundedly+Rational+Adversary" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Solving Constrained Reinforcement Learning through Augmented State and Reward Penalties</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Jiang H.*, Mai T., Varakantham P., Hoang H*</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> AAAI 2024</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <a href="https://scholar.google.com/scholar?q=Solving+Constrained+Reinforcement+Learning+through+Augmented+State+and+Reward+Penalties" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Imitate the Good and Avoid the Bad: An Incremental Approach to Safe Reinforcement Learning</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Hoang H.*, Mai T., Varakantham P.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> AAAI 2024</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Imitation Learning</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <a href="https://scholar.google.com/scholar?q=Imitate+the+Good+and+Avoid+the+Bad:+An+Incremental+Approach+to+Safe+Reinforcement+Learning" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <!-- 2023 -->
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200 mt-4">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-blue-500"></div>
+                            <span class="absolute -left-16 top-0.5 text-sm font-bold text-blue-600">2023</span>
+                            <h4 class="text-lg font-bold leading-snug">Joint Location and Cost Planning in Maximum Capture Problems under Random Utility Models</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Ngan H.*, Dam T.T.*, Ta T.A., Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Computer and Operations Research</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Facility Location</span>
+                                <a href="https://scholar.google.com/scholar?q=Joint+Location+and+Cost+Planning+in+Maximum+Capture+Problems+under+Random+Utility+Models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Robust Maximum Capture Facility Location under Random Utility Models</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Dam T.T*., Ta. T.A, Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> European Journal of Operational Research</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Facility Location</span>
+                                <a href="https://scholar.google.com/scholar?q=Robust+Maximum+Capture+Facility+Location+under+Random+Utility+Models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Imitation Improvement Learning for Large-scale Capacitated Vehicle Routing Problems</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Bui T.V.*, Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> ICAPS 2023</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Imitation Learning</span>
+                                <a href="https://scholar.google.com/scholar?q=Imitation+Improvement+Learning+for+Large-scale+Capacitated+Vehicle+Routing+Problems" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Imitating Opponent to Win: Adversarial Policy Imitation Learning in Two-player Competitive Games</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Bui T.V.*, Mai T., Thanh H. Nguyen</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> AAMAS 2023</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">IRL/RL</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Imitation Learning</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Competitive Games</span>
+                                <a href="https://scholar.google.com/scholar?q=Imitating+Opponent+to+Win:+Adversarial+Policy+Imitation+Learning+in+Two-player+Competitive+Games" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">A Fair Incentive Scheme for Community Health Workers</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Bose A.*, Li T., Sinha A., Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> AAAI 2023</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <a href="https://scholar.google.com/scholar?q=A+Fair+Incentive+Scheme+for+Community+Health+Workers" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Safe Delivery of Critical Services in Areas with Volatile Security Situation via a Stackelberg Game Approach</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Sinha A.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> AAAI 2023</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <a href="https://scholar.google.com/scholar?q=Safe+Delivery+of+Critical+Services+in+Areas+with+Volatile+Security+Situation+via+a+Stackelberg+Game+Approach" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Estimation of Recursive Route Choice Models with Incomplete Trip Observations</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Bui T.V.*, Nguyen Q.P., Le T.V.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Transportation Research Part B</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=Estimation+of+Recursive+Route+Choice+Models+with+Incomplete+Trip+Observations" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">An algorithm for assortment optimization under parametric discrete choice models</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Lodi A.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-purple-50 text-purple-700 px-1.5 py-0.5 rounded text-xs mr-1">[B]</span> Fields Institute Communications Series</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Revenue Management</span>
+                                <a href="https://scholar.google.com/scholar?q=An+algorithm+for+assortment+optimization+under+parametric+discrete+choice+models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <!-- 2022 -->
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200 mt-4">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-blue-500"></div>
+                            <span class="absolute -left-16 top-0.5 text-sm font-bold text-blue-600">2022</span>
+                            <h4 class="text-lg font-bold leading-snug">Undiscounted Recursive Path Choice Models: Convergence Properties and Algorithms</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Frejinger E.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Transportation Science</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=Undiscounted+Recursive+Path+Choice+Models:+Convergence+Properties+and+Algorithms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                                <a href="#" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded transition-colors"><i data-lucide="link" class="w-3.5 h-3.5"></i> Link</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Joint Chance-constrained Simulation-based Staffing Optimization in Multi-skill Call Centers</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Dam T.T.*, Ta T.A., Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Journal of Combinatorial Optimization</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Optimization</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Stochastic Simulation</span>
+                                <a href="https://scholar.google.com/scholar?q=Joint+Chance-constrained+Simulation-based+Staffing+Optimization+in+Multi-skill+Call+Centers" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Scalable Distributional Robustness in a Class of Non-Convex Optimization with Guarantees</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Bose A.*, Sinha A., Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> NeurIPS 2022</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Robust Optimization</span>
+                                <a href="https://scholar.google.com/scholar?q=Scalable+Distributional+Robustness+in+a+Class+of+Non-Convex+Optimization+with+Guarantees" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">A logistic regression and linear programming approach for multi-skill staffing optimization in call centers</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Ta T.A., Mai T., Bastin F., l'Ecuyer P.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> WSC 2022</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Optimization</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Simulation</span>
+                                <a href="https://scholar.google.com/scholar?q=A+logistic+regression+and+linear+programming+approach+for+multi-skill+staffing+optimization+in+call+centers" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Choices Are Not Independent: Stackelberg Security Games with Nested Quantal Response Models</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Sinha A.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> AAAI 2022</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Nested logit</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Security Game</span>
+                                <a href="https://scholar.google.com/scholar?q=Choices+Are+Not+Independent:+Stackelberg+Security+Games+with+Nested+Quantal+Response+Models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <!-- 2021 -->
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200 mt-4">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-blue-500"></div>
+                            <span class="absolute -left-16 top-0.5 text-sm font-bold text-blue-600">2021</span>
+                            <h4 class="text-lg font-bold leading-snug">Submodularity and Local Search Approaches for Maximum Capture Problems under Generalized Extreme Value Models</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Dam T.T.*, Ta T.A., Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> European Journal of Operational Research</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Facility Location</span>
+                                <a href="https://scholar.google.com/scholar?q=Submodularity+and+Local+Search+Approaches+for+Maximum+Capture+Problems+under+Generalized+Extreme+Value+Models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Route choice in a stochastic time-dependent network: the recursive model and solution algorithm</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Yu X., Gao S., Frejinger E.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Transportation Research Part B</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=Route+choice+in+a+stochastic+time-dependent+network:+the+recursive+model+and+solution+algorithm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <!-- 2020 -->
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200 mt-4">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-blue-500"></div>
+                            <span class="absolute -left-16 top-0.5 text-sm font-bold text-blue-600">2020</span>
+                            <h4 class="text-lg font-bold leading-snug">On a multistage discrete stochastic optimization problem with stochastic constraints and nested sampling</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Ta T.A., Mai T., Bastin F., l'Ecuyer P.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Mathematical Programming</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Stochastic Programming</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Stochastic Simulation</span>
+                                <a href="https://scholar.google.com/scholar?q=On+a+multistage+discrete+stochastic+optimization+problem+with+stochastic+constraints+and+nested+sampling" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Route choice behaviour and travel information in a congested network: Static and dynamic recursive models</h4>
+                            <p class="text-slate-600 mt-1 text-sm">de Moraes Ramos G., Mai T., Daamen W., Frejinger E., Hoogendoorn S. P.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Transportation Research Part C</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=Route+choice+behaviour+and+travel+information+in+a+congested+network:+Static+and+dynamic+recursive+models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">A multicut outer-approximation approach for competitive facility location under random utilities</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Lodi A.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> European Journal of Operational Research</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Facility Location</span>
+                                <a href="https://scholar.google.com/scholar?q=A+multicut+outer-approximation+approach+for+competitive+facility+location+under+random+utilities" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-slate-200">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Simulating and evaluating rebalancing strategies for dockless Bike-Sharing Systems</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Barabonkovy D.*, D'Alonzoy S.*, Pierre J.*, Kondor D., Zhang X., Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-xs mr-1">[C]</span> TRB 99th Annual Meeting</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <a href="https://scholar.google.com/scholar?q=Simulating+and+evaluating+rebalancing+strategies+for+dockless+Bike-Sharing+Systems" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <!-- 2018 & Earlier -->
+                        <div class="group relative pl-8 pb-8 border-l-2 border-transparent mt-4">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-slate-400"></div>
+                            <span class="absolute -left-[4.5rem] top-0.5 text-sm font-bold text-slate-500">2018-15</span>
+                            <h4 class="text-lg font-bold leading-snug">Transferring Time-Series Discrete Choice to Link-based Route Choice in Space: Estimating Vehicle Type Preference Using Recursive Logit Model</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Bastin F., Liu Y., Cirillo C., Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Transportation Research Record (2018)</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=Transferring+Time-Series+Discrete+Choice+to+Link-based+Route+Choice+in+Space:+Estimating+Vehicle+Type+Preference+Using+Recursive+Logit+Model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-transparent">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">A dynamic programming approach for quickly estimating large network-based MEV models</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Frejinger E., Fosgerau M., Bastin F.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Transportation Research Part B (2017)</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=A+dynamic+programming+approach+for+quickly+estimating+large+network-based+MEV+models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-transparent">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">Bike route choice modeling using GPS data without choice sets of paths</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Zimmermann M., Mai T., Frejinger E.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Transportation Research Part C (2017)</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=Bike+route+choice+modeling+using+GPS+data+without+choice+sets+of+paths" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-transparent">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">On the similarities between random regret minimization and mother logit: the case of recursive route choice models</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Frejinger, E., Bastin, F.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Journal of Choice Modeling (2017)</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=On+the+similarities+between+random+regret+minimization+and+mother+logit:+the+case+of+recursive+route+choice+models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-transparent">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">A method of integrating correlation structures for a generalized recursive route choice model</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Transportation Research Part B (2016)</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=A+method+of+integrating+correlation+structures+for+a+generalized+recursive+route+choice+model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-transparent">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">A nested recursive logit for route choice analysis</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Fosgereau M., Frejinger E.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Transportation Research Part B (2015)</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=A+nested+recursive+logit+for+route+choice+analysis" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-8 border-l-2 border-transparent">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">A misspecification test for logit-based route choice models</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Frejinger, E., Bastin, F.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> Economics of Transportation (2015)</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=A+misspecification+test+for+logit-based+route+choice+models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+
+                        <div class="group relative pl-8 pb-4 border-l-2 border-transparent">
+                            <div class="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-slate-300"></div>
+                            <h4 class="text-lg font-bold leading-snug">A decomposition method for estimating complex recursive logit-based route choice models</h4>
+                            <p class="text-slate-600 mt-1 text-sm">Mai T., Bastin F., Frejinger E.</p>
+                            <p class="text-sm font-semibold text-slate-700 mt-1"><span class="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-xs mr-1">[J]</span> EURO Journal on Transportation and Logistics (2015)</p>
+                            <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Discrete Choice</span>
+                                <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded border border-slate-200">Route Choice</span>
+                                <a href="https://scholar.google.com/scholar?q=A+decomposition+method+for+estimating+complex+recursive+logit-based+route+choice+models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Scholar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Working Papers Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm sticky top-24">
+                        <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-100 pb-4">
+                            <i data-lucide="file-clock" class="w-5 h-5 text-indigo-500"></i> Working Papers
+                        </h3>
+                        
+                        <!-- Scrollable container for many items -->
+                        <div class="space-y-5 overflow-y-auto max-h-[calc(100vh-14rem)] pr-3 custom-scrollbar">
+                            
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Constrained Pricing under Finite Mixtures of Logit Demand</h4>
+                                <p class="text-slate-500 text-xs mt-1">Pham H.G*, Mai T. <span class="text-amber-600 font-medium">(Submitted)</span></p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Discrete Choice</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Revenue Management</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Pricing</span>
+                                    <a href="https://scholar.google.com/scholar?q=Constrained+Pricing+under+Finite+Mixtures+of+Logit+Demand" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">SamaDICE: Safe Multi-Agent Reinforcement Learning with Stationary Distribution Correction Estimation</h4>
+                                <p class="text-slate-500 text-xs mt-1">Bui T.V.*, Mai T., Thanh H. Nguyen.</p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Multi-agent RL</span>
+                                    <a href="https://scholar.google.com/scholar?q=SamaDICE:+Safe+Multi-Agent+Reinforcement+Learning+with+Stationary+Distribution+Correction+Estimation" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Revisiting Distribution Correction Estimation for Offline Imitation Learning with Suboptimal Dataset</h4>
+                                <p class="text-slate-500 text-xs mt-1">Pham Q.A.*, Mai T., Kumar A.</p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Imitation Learning</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">IRL/RL</span>
+                                    <a href="https://scholar.google.com/scholar?q=Revisiting+Distribution+Correction+Estimation+for+Offline+Imitation+Learning+with+Suboptimal+Dataset" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Beyond Homogeneous Adversaries: Stackelberg Security Games with Mixed Quantal Response</h4>
+                                <p class="text-slate-500 text-xs mt-1">Pham H.G*, Mai T. <span class="text-amber-600 font-medium">(Submitted)</span></p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Discrete Choice</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Security Game</span>
+                                    <a href="https://scholar.google.com/scholar?q=Beyond+Homogeneous+Adversaries:+Stackelberg+Security+Games+with+Mixed+Quantal+Response" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Constrained Assortment and Price Optimization under Generalized Nested Logit Models</h4>
+                                <p class="text-slate-500 text-xs mt-1">Pham H.G*, Mai T. <span class="text-amber-600 font-medium">(Submitted)</span></p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Discrete Choice</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Revenue Management</span>
+                                    <a href="https://scholar.google.com/scholar?q=Constrained+Assortment+and+Price+Optimization+under+Generalized+Nested+Logit+Models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Equilibrium-Constrained Estimation of Recursive Logit Choice Models</h4>
+                                <p class="text-slate-500 text-xs mt-1">Tran H.*, Mai T. <span class="text-amber-600 font-medium">(Under review)</span></p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Discrete Choice</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Route Choice</span>
+                                    <a href="https://scholar.google.com/scholar?q=Equilibrium-Constrained+Estimation+of+Recursive+Logit+Choice+Models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">From Scarcity to Efficiency: Preference-Guided Learning for Sparse-Reward Multi-Agent Reinforcement Learning</h4>
+                                <p class="text-slate-500 text-xs mt-1">Bui T.V.*, Mai T., Thanh H. Nguyen.</p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Multi-agent RL</span>
+                                    <a href="https://scholar.google.com/scholar?q=From+Scarcity+to+Efficiency:+Preference-Guided+Learning+for+Sparse-Reward+Multi-Agent+Reinforcement+Learning" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">On the Estimation of Multinomial Logit and Nested Logit Models: A Conic Optimization Approach</h4>
+                                <p class="text-slate-500 text-xs mt-1">Pham H.G*, Mai T., Ha M.H. <span class="text-amber-600 font-medium">(Submitted)</span></p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Discrete Choice</span>
+                                    <a href="https://scholar.google.com/scholar?q=On+the+Estimation+of+Multinomial+Logit+and+Nested+Logit+Models:+A+Conic+Optimization+Approach" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Constrained Recursive Logit for Route Choice Analysis</h4>
+                                <p class="text-slate-500 text-xs mt-1">Tran H.*, Mai T., Ha M.H. <span class="text-amber-600 font-medium">(Submitted)</span></p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Discrete Choice</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Route Choice</span>
+                                    <a href="https://scholar.google.com/scholar?q=Constrained+Recursive+Logit+for+Route+Choice+Analysis" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Learning What to Do and What Not To Do: Offline Imitation from Expert and Undesirable Demonstrations</h4>
+                                <p class="text-slate-500 text-xs mt-1">Hoang H*., Mai T., Varakantham, Verma T.</p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Imitation Learning</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">IRL/RL</span>
+                                    <a href="https://scholar.google.com/scholar?q=Learning+What+to+Do+and+What+Not+To+Do:+Offline+Imitation+from+Expert+and+Undesirable+Demonstrations" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Competitive Facility Location with Market Expansion and Customer-centric Objective</h4>
+                                <p class="text-slate-500 text-xs mt-1">Le C.*, Mai T., Duong N.H.*, Ha M.H. <span class="text-amber-600 font-medium">(Under review)</span></p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Discrete Choice</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Facility Location</span>
+                                    <a href="https://scholar.google.com/scholar?q=Competitive+Facility+Location+with+Market+Expansion+and+Customer-centric+Objective" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Competitive Facility Location under Random Utilities and Routing Constraints</h4>
+                                <p class="text-slate-500 text-xs mt-1">Pham H.G*, Dam T.T*, Duong N.H.*, Mai T., Ha M.H. <span class="text-amber-600 font-medium">(Submitted)</span></p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Discrete Choice</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Facility Location</span>
+                                    <a href="https://scholar.google.com/scholar?q=Competitive+Facility+Location+under+Random+Utilities+and+Routing+Constraints" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Unleashing Imitation Learning Potential in Two-Player Competitive Games</h4>
+                                <p class="text-slate-500 text-xs mt-1">Bui T.V.*, Mai T., Thanh H. Nguyen. <span class="text-amber-600 font-medium">(Submitted)</span></p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">IRL/RL</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Imitation Learning</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Competitive Games</span>
+                                    <a href="https://scholar.google.com/scholar?q=Unleashing+Imitation+Learning+Potential+in+Two-Player+Competitive+Games" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Joint Binary-Continuous Fractional Programming: Solution Methods and Applications</h4>
+                                <p class="text-slate-500 text-xs mt-1">Pham H.G*, Duong N.H.*, Mai T., Ta T.A., Ha M.H. <span class="text-amber-600 font-medium">(Under review)</span></p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Discrete Choice</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Combinatorial optimization</span>
+                                    <a href="https://scholar.google.com/scholar?q=Joint+Binary-Continuous+Fractional+Programming:+Solution+Methods+and+Applications" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Weighted Maximum Entropy Inverse Reinforcement Learning</h4>
+                                <p class="text-slate-500 text-xs mt-1">Bui T.V.*, Mai T., Jaillet P.</p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Behavior Learning</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">IRL</span>
+                                    <a href="https://scholar.google.com/scholar?q=Weighted+Maximum+Entropy+Inverse+Reinforcement+Learning" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Robust pricing under generalized extreme value models</h4>
+                                <p class="text-slate-500 text-xs mt-1">Mai T., Jaillet P.</p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Discrete Choice</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Revenue Management</span>
+                                    <a href="https://scholar.google.com/scholar?q=Robust+pricing+under+generalized+extreme+value+models" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">On the relation between Markov Decision Process frameworks</h4>
+                                <p class="text-slate-500 text-xs mt-1">Mai T., Jaillet P.</p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">IRL/RL</span>
+                                    <a href="https://scholar.google.com/scholar?q=On+the+relation+between+Markov+Decision+Process+frameworks" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Robust entropy-regularized Markov Decision Processes</h4>
+                                <p class="text-slate-500 text-xs mt-1">Mai T., Jaillet P.</p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">IRL/RL</span>
+                                    <a href="https://scholar.google.com/scholar?q=Robust+entropy-regularized+Markov+Decision+Processes" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm leading-snug hover:text-blue-600 transition">Inverse reinforcement learning with missing data</h4>
+                                <p class="text-slate-500 text-xs mt-1">Mai T., Nguyen Q. P., Low K. H., Jaillet P.</p>
+                                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">IRL/RL</span>
+                                    <span class="px-1.5 py-0.5 bg-slate-100 text-slate-500 text-[10px] rounded border border-slate-200">Route Choice</span>
+                                    <a href="https://scholar.google.com/scholar?q=Inverse+reinforcement+learning+with+missing+data" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[10px] font-semibold px-1.5 py-0.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded transition-colors"><i data-lucide="graduation-cap" class="w-2.5 h-2.5"></i> Scholar</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder for Group -->
+    <section id="group" class="py-24 px-4 bg-white border-y border-slate-200">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl section-title">Research Group</h2>
+            <p class="text-slate-600 mb-12 text-lg max-w-2xl">Meet the talented students and researchers in our team.</p>
+            
+            <!-- Reinforcement Learning Team -->
+            <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <i data-lucide="cpu" class="w-6 h-6 text-blue-600"></i> Reinforcement Learning (RL) Team
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <!-- RL Member 1 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-blue-500"></div>
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">Hoang Minh Huy</h4>
+                            <p class="text-sm font-medium text-blue-600 mt-0.5">Ph.D. Student</p>
+                            <p class="text-xs text-slate-500 mt-1">Jan 2025 - Present</p>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-400 shadow-sm border border-slate-100 flex-shrink-0">
+                            <i data-lucide="user" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2 mt-4 pt-4 border-t border-slate-200">
+                        <p class="text-xs font-semibold flex items-start gap-2 text-slate-700">
+                            <i data-lucide="award" class="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5"></i> 
+                            <span>A*STAR Merit Award</span>
+                        </p>
+                        <p class="text-xs font-semibold flex items-start gap-2 text-slate-700">
+                            <i data-lucide="award" class="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5"></i> 
+                            <span>SMU Presidential Doctorate Fellowship (2025-2026)</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- RL Member 2 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-blue-500"></div>
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">Bui The Viet</h4>
+                            <p class="text-sm font-medium text-blue-600 mt-0.5">Ph.D. Student</p>
+                            <p class="text-xs text-slate-500 mt-1">Jan 2024 - Present</p>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-400 shadow-sm border border-slate-100 flex-shrink-0">
+                            <i data-lucide="user" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2 mt-4 pt-4 border-t border-slate-200">
+                        <p class="text-xs font-semibold flex items-start gap-2 text-slate-700">
+                            <i data-lucide="award" class="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5"></i> 
+                            <span>SMU Presidential Doctorate Fellowship (2024-2026)</span>
+                        </p>
+                        <p class="text-xs font-semibold flex items-start gap-2 text-slate-700">
+                            <i data-lucide="award" class="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5"></i> 
+                            <span>AISG Fellow & SMU Dean's List (2025-2026)</span>
+                        </p>
+                        <p class="text-xs font-semibold flex items-start gap-2 text-slate-700">
+                            <i data-lucide="award" class="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5"></i> 
+                            <span>SMU Staff Excellence Award 2023</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- RL Member 3 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-blue-500"></div>
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">Pham Quang Anh</h4>
+                            <p class="text-sm font-medium text-blue-600 mt-0.5">Ph.D. Student</p>
+                            <p class="text-xs text-slate-500 mt-1">Sep 2025 - Present<br>(Co-supervised with Akshat Kumar)</p>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-400 shadow-sm border border-slate-100 flex-shrink-0">
+                            <i data-lucide="user" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2 mt-4 pt-4 border-t border-slate-200">
+                        <p class="text-xs font-semibold flex items-start gap-2 text-slate-700">
+                            <i data-lucide="award" class="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5"></i> 
+                            <span>AISG Fellow</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operations Research Team -->
+            <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <i data-lucide="network" class="w-6 h-6 text-emerald-600"></i> Operations Research (OR) Team
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <!-- OR Member 1 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-500"></div>
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">Tran Huy Hung</h4>
+                            <p class="text-sm font-medium text-emerald-600 mt-0.5">Ph.D. Student</p>
+                            <p class="text-xs text-slate-500 mt-1">Sep 2024 - Present</p>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-400 shadow-sm border border-slate-100 flex-shrink-0">
+                            <i data-lucide="user" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2 mt-4 pt-4 border-t border-slate-200">
+                        <p class="text-xs font-semibold flex items-start gap-2 text-slate-700">
+                            <i data-lucide="award" class="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5"></i> 
+                            <span>Vingroup PhD Scholar</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- OR Member 2 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-500"></div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">Pham Hoang Giang</h4>
+                            <p class="text-sm font-medium text-emerald-600 mt-0.5">Ph.D. Student</p>
+                            <p class="text-xs text-slate-500 mt-1">Jan 2024 - Present</p>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-400 shadow-sm border border-slate-100 flex-shrink-0">
+                            <i data-lucide="user" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OR Member 3 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-500"></div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">Le Ba Luat</h4>
+                            <p class="text-sm font-medium text-emerald-600 mt-0.5">Incoming Ph.D. Student</p>
+                            <p class="text-xs text-slate-500 mt-1">Research Assistant @ NEU, Vietnam</p>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-400 shadow-sm border border-slate-100 flex-shrink-0">
+                            <i data-lucide="user" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OR Member 4 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-500"></div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg">Rui Dong</h4>
+                            <p class="text-sm font-medium text-emerald-600 mt-0.5">Visiting Ph.D. Student</p>
+                            <p class="text-xs text-slate-500 mt-1">Nov 2025 - Present<br>(PhD student at Hefei Univ. of Tech)</p>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-400 shadow-sm border border-slate-100 flex-shrink-0">
+                            <i data-lucide="user" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Former Members -->
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
+                <h3 class="text-xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-3 flex items-center gap-2">
+                    <i data-lucide="users" class="w-5 h-5 text-slate-500"></i> Former Members & Visiting Students
+                </h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6">
+                    <!-- Visiting Students -->
+                    <div>
+                        <p class="font-semibold text-slate-800 text-sm mb-2">Visiting Students (@ SMU)</p>
+                        <ul class="space-y-1.5 text-sm text-slate-600">
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Dam Tien Thanh</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Duong Ngan Ha</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Le Van Cuong</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Tran Huy Hung</li>
+                        </ul>
+                    </div>
+
+                    <!-- Masters & Undergrad -->
+                    <div>
+                        <p class="font-semibold text-slate-800 text-sm mb-2">Masters & Undergrad</p>
+                        <ul class="space-y-1.5 text-sm text-slate-600">
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Manyuan Tao (MSc, UdeM)</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Tuan Luong (MSc, FPT Uni)</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Hu Renjun (MSc, NUS)</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Haoze QIU (BSc, NTU)</li>
+                        </ul>
+                    </div>
+
+                    <!-- SMURF Fellows -->
+                    <div>
+                        <p class="font-semibold text-slate-800 text-sm mb-2">SMURF Fellows</p>
+                        <ul class="space-y-1.5 text-sm text-slate-600">
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Arturo CHAVEZ GEHRIG (MIT)</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Kennard Chan (NTU)</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Damian BARABONKOV (MIT)</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Samantha D'ALONZO (MIT)</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Joseph PIERRE (MIT)</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Shui Song LUAR (NTU)</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>James LIN (MIT)</li>
+                            <li><span class="w-1.5 h-1.5 inline-block bg-slate-300 rounded-full mr-2"></span>Madeline WANG (MIT)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-24 px-4 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl section-title">Latest News</h2>
+            
+            <div class="grid gap-10 md:grid-cols-2 mt-8">
+                <!-- News Column 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-6 h-6 text-blue-600"></i> 2025 - 2026
+                    </h3>
+                    <ul class="space-y-5 text-sm md:text-base text-slate-700">
+                        <li class="flex gap-4">
+                            <span class="font-bold text-blue-700 min-w-[80px]">Jan 2026</span>
+                            <span>A paper accepted to INFORMS Journal on Computing.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="font-bold text-blue-700 min-w-[80px]">Dec 2025</span>
+                            <span>Quang Anh was awarded the AISG PhD Fellowship, marking the second student in my team to earn this award.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="font-bold text-blue-700 min-w-[80px]">Oct 2025</span>
+                            <span>Two journal papers to INFORMS Journal on Computing and EJOR.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="font-bold text-blue-700 min-w-[80px]">Sep 2025</span>
+                            <span>Three papers to NeurIPS 2025. Congratulations to Huy and Quang Anh!</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="font-bold text-blue-700 min-w-[80px]">Jun 2025</span>
+                            <span>Viet BUI was awarded the AISG PhD Fellowship and selected for Dean's List 2025 of SCIS.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- News Column 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-6 h-6 text-blue-600"></i> 2024
+                    </h3>
+                    <ul class="space-y-5 text-sm md:text-base text-slate-700">
+                        <li class="flex gap-4">
+                            <span class="font-bold text-slate-600 min-w-[80px]">Sep 2024</span>
+                            <span>Hoang Minh Huy awarded A*STAR's Merit Award to join our team as a PhD student.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="font-bold text-slate-600 min-w-[80px]">Sep 2024</span>
+                            <span>3 papers to NeurIPS 2024, congrats Bui The Viet and Hoang Minh Huy.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="font-bold text-slate-600 min-w-[80px]">May 2024</span>
+                            <span>Awarded the Lee Kong Chian Fellowship for research excellence.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="font-bold text-slate-600 min-w-[80px]">Apr 2024</span>
+                            <span>Hung Tran was offered a Vingroup Young Talent Scholarship to join our team.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="font-bold text-slate-600 min-w-[80px]">Jan 2024</span>
+                            <span>Pham Hoang Giang and Bui The Viet joined our team as PhD students.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Expanding older news -->
+            <div class="mt-8">
+                <details class="group bg-white border border-slate-200 rounded-xl cursor-pointer hover:border-blue-300 transition duration-300 overflow-hidden shadow-sm">
+                    <summary class="p-5 font-semibold text-slate-800 outline-none flex justify-between items-center select-none bg-slate-50 group-hover:bg-blue-50/50 transition">
+                        <span>View Older News (2023 and earlier)</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-500 group-open:rotate-180 transition-transform duration-300"></i>
+                    </summary>
+                    <div class="p-6 border-t border-slate-100 text-sm md:text-base text-slate-700 space-y-4 bg-white">
+                        <p><strong class="text-slate-900">Dec 2023:</strong> Two papers on safe RL and imitation learning to AAAI 2024.</p>
+                        <p><strong class="text-slate-900">Oct 2023:</strong> Bui The Viet got an SMU Presidential Doctorate Fellowship in Computing and the 2023 SMU Research Staff Excellence Awards.</p>
+                        <p><strong class="text-slate-900">Dec 2021:</strong> Organized VIASM Meeting on Mathematical Aspects of Computer Sciences.</p>
+                        <p><strong class="text-slate-900">April 2020:</strong> Accepted an offer of Assistant Professor in Information Systems at Singapore Management University.</p>
+                        <p><strong class="text-slate-900">Jan 2018:</strong> Got the Eric Pas Dissertation Prize at the Transportation Research Board (TRB) 97th Annual Meeting.</p>
+                        <p><strong class="text-slate-900">Dec 2016:</strong> Got the TSL-INFORMS Dissertation Prize at the 2016 INFORMS Annual Meeting.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm border-t-4 border-blue-600">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Tien Mai. All rights reserved.</p>
+            <div class="flex gap-4">
+                <!-- Add links to Google Scholar, LinkedIn, etc. here -->
+                <a href="#" class="hover:text-white transition"><i data-lucide="graduation-cap" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
